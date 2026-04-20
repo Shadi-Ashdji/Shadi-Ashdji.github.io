@@ -9,39 +9,43 @@
 
   <meta name="robots" content="index, follow">
   <style>
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f9f9f9;
+  }
 
-    body.loaded {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .projects {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
+  .container {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(10px);
+    transition: all 0.8s ease;
+  }
 
-    .projects li {
-      margin-bottom: 15px;
-    }
+  .container.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 
-    .projects p {
-      margin: 5px 0;
-    }
+  .projects {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
 
-    .projects a {
-      display: inline-block;
-      margin-top: 5px;
-    }
-    
-  </style>
+  .projects li {
+    margin-bottom: 15px;
+  }
+
+  .projects p {
+    margin: 5px 0;
+  }
+
+  .projects a {
+    display: inline-block;
+    margin-top: 5px;
+  }
+</style>
 
 </head>
 
@@ -71,6 +75,6 @@
 
 <a href="https://github.com/Shadi-Ashdji">My GitHub Profile</a>
 
-  
+</div> 
 
   
