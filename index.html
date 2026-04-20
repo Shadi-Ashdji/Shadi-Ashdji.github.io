@@ -1,80 +1,89 @@
 <!DOCTYPE html>
-</html>
+<html>
 <head>
   <title>Shadi Ashdji - Computer Science Student | Backend Developer</title>
-
   <meta name="google-site-verification" content="1NMjfoJyjINO2cQ1wlOXNILSnlXY2-f_dcuVCnMfgJo" />
-
   <meta name="description" content="Shadi Ashdji is a Computer Science student at the University of North Florida focused on backend development using Java and Spring Boot.">
-
   <meta name="robots" content="index, follow">
+
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background: #f9f9f9;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+    }
 
-  .container {
-    opacity: 0;
-    transform: translateY(40px);
-    filter: blur(10px);
-    transition: all 0.8s ease;
-  }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(8px);
+      transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+    }
 
-  .container.loaded {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
 
-  .projects {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.3s; }
+    .delay-3 { transition-delay: 0.5s; }
+    .delay-4 { transition-delay: 0.7s; }
 
-  .projects li {
-    margin-bottom: 15px;
-  }
+    .projects {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
 
-  .projects p {
-    margin: 5px 0;
-  }
+    .projects li {
+      margin-bottom: 15px;
+    }
 
-  .projects a {
-    display: inline-block;
-    margin-top: 5px;
-  }
-</style>
+    .projects p {
+      margin: 5px 0;
+    }
 
+    .projects a {
+      display: inline-block;
+      margin-top: 5px;
+      transition: transform 0.2s ease;
+    }
+
+    .projects a:hover,
+    a:hover {
+      transform: translateX(4px);
+    }
+  </style>
 </head>
-
-<script>
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
-</script>
-
 <body>
-  <h1>Shadi Ashdji</h1>
+  <h1 class="reveal delay-1">Shadi Ashdji</h1>
 
-  <p>
+  <p class="reveal delay-2">
     I am Shadi Ashdji, a Computer Science student at the University of North Florida.
     I focus on backend development using Java and Spring Boot and building scalable systems.
   </p>
 
- <h2>Projects</h2>
+  <h2 class="reveal delay-3">Projects</h2>
 
-<ul class="projects">
-  <li>
-    <strong>Employee Database REST API</strong>
-    <p>Built using Java and Spring Boot to manage employee records with CRUD operations and database persistence.</p>
-    <a href="https://github.com/Shadi-Ashdji/employee-API">View Project</a>
-  </li>
-</ul>
+  <ul class="projects reveal delay-4">
+    <li>
+      <strong>Employee Database REST API</strong>
+      <p>Built using Java and Spring Boot to manage employee records with CRUD operations and database persistence.</p>
+      <a href="https://github.com/Shadi-Ashdji/employee-API">View Project</a>
+    </li>
+  </ul>
 
-<a href="https://github.com/Shadi-Ashdji">My GitHub Profile</a>
+  <p class="reveal delay-4">
+    <a href="https://github.com/Shadi-Ashdji">My GitHub Profile</a>
+  </p>
 
-</div> 
-
-  
+  <script>
+    window.addEventListener("load", function () {
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        el.classList.add("show");
+      });
+    });
+  </script>
+</body>
+</html>
