@@ -30,6 +30,17 @@
     .projects a {
       display: inline-block;
       margin-top: 5px;
+      
+       body {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
     }
   </style>
 
